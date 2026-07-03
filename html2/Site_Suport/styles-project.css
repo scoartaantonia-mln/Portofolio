@@ -1,0 +1,211 @@
+ body {
+      font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+    }
+    
+ /* NavBar */
+        
+        nav { 
+            background: #d12f88;
+            padding: 10px; 
+            font-size: x-large;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .nav-title {
+            margin-left: 10px;
+            color: white;
+        }
+        nav ul { 
+            list-style-type: none; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center; 
+        }
+        nav ul li { 
+            padding: 0 10px; 
+        }
+                nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffd700;
+    color: black;
+}
+        
+        .section { 
+            padding: 20px 0; 
+            text-align: center; 
+        }
+
+        #button_call {
+            background: #ffd700;
+            border-radius: 20px;
+            color: black;
+            padding: 15px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.201);
+          
+        }
+
+.hover-box {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-box:hover {
+      transform: scale(1.05);
+    }
+
+    /*boxes images*/
+
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
+    }
+
+
+     /*Footer */
+
+          footer {
+            background-color: #d12f88; 
+            color: white;
+            padding: 20px 0;
+            font-size: 0.9rem;
+          }
+          
+          .footer-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: start;
+            padding-bottom: 20px;
+          }
+          
+          .footer-logo, .footer-nav, .footer-social {
+            margin: 0 20px;
+          }
+          
+          .footer-logo img {
+            max-width: 100px; 
+            margin-bottom: 10px;
+          }
+
+       
+          
+          .footer-column {
+            display: flex;
+            flex-direction: column;
+          }
+          
+          .footer-column h4 {
+            margin-bottom: 10px;
+          }
+          
+          .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #555; 
+            padding-top: 10px;
+          }
+
+          /*Responsive Design*/
+
+          @media (max-width: 480px) {
+
+            body, h1, h2, h3, p {
+                font-size: 90%; 
+            }
+        
+            nav ul {
+                flex-direction: flex; 
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+              
+            }
+
+            #button_call{
+              display: none;
+            }
+        
+            nav ul li {
+                padding: 5px 0; 
+                margin: 20px;
+                font-weight: bold;
+            }
+
+            .nav-title{
+              display: none;
+            }
+
+            .content-section{
+              display:contents
+            }
+
+            .text-container{
+              margin-top: 100px;
+              margin-bottom: 100px;
+            }
+
+            .text-container > h2{
+
+              margin-bottom: 50px;
+            }
+
+            .image-container{
+              margin-top: 100px;
+              margin-bottom: 100px;
+            }
+
+            .content-section .image-container {
+                height: 300px; 
+            }
+        
+            .skills-section .skill {
+                width: 100%; 
+                transform: none; 
+            }
+        
+            .footer-container, .footer-column {
+                flex-direction: column; 
+                align-items: center;
+                text-align: center;
+            }
+            .section-title h2,  .project-title {
+              font-size: 1.2rem; 
+          }
+
+          .CTA-title{
+            font-size: 1.9rem; 
+          }
+
+          .section_CTA {
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
+      
+          .project-grid {
+              grid-template-columns: 1fr; 
+          }
+
+        }
+        
+             .footer-social a {
+  color: white;
+  font-size: 50px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ffd700; /* yellow highlight on hover */
+}
+     
+
+        
+        
+          

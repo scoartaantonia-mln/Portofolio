@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      scroll-padding-top: 100px; /* Adjust based on your layout */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* NAVBAR */
+    #navbar {
+      position:sticky;
+      top: 0;
+      background-color: #1f1f1f;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+      
+    }
+
+    #navbar li {
+      list-style: none;
+    }
+
+    #navbar li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10.5px 20px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border-radius: 30px;
+    }
+
+    #navbar li a:hover {
+      background-color: #ffffff;
+      color: #1a1a2e;
+      transform: scale(1.05);
+    }
+
+    /* Footer css*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 20px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 25px;
+    color: black;
+    opacity: 0.9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+    /* SLIDE-IN SIDEBAR */
+    #menu-toggle {
+      display: none;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 183px;
+      height: 100%;
+      background-color: #1f1f1f;
+      overflow-x: hidden;
+      transition: left 0.4s;
+      padding-top: 80px;
+      font-size: 18px;
+    }
+
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 15px;
+      margin: 5px 0;
+    }
+
+    #menu-toggle:checked ~ .sidebar {
+      left: 0;
+    }
+
+    /* Sidebar style*/
+    .toggle-button {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      background-color: #bdbdbd;
+      color: #1f1f1f;
+      padding: 8.8px 30px;
+      cursor: pointer;
+      z-index: 1000;
+      letter-spacing: 5px;
+    }
+.sidebar a:hover {
+  background-color: #ffffff;
+      color: #1a1a2e;
+      transform: scale(1.05);
+}
+
+   /*Sidebar content*/ 
+    .main-content {
+      margin-left: 0;
+      transition: margin-left 0.4s;
+      min-height: 100vh;
+    }
+
+    .main-content p {
+      font-size: 20px;
+
+    }
+    .main-content h2{
+      font-size: 30px;
+      margin-bottom: 10px; /* adjust this to control the space between the title and text */
+      margin-top: -60px;/* move the title higher */
+    }
+
+    .text-section {
+  max-width: 650px;
+  padding-left: 80px;
+  padding-top: 50px;
+ 
+}
+
+    
+
+    #menu-toggle:checked ~ .main-content {
+      margin-left: 250px;
+    }
+
+    .hobby-section {
+      display: none;
+      align-items: center;
+      
+    }
+
+    .default-message {
+      display: block;
+      text-align: right;
+      font-size: 1.2em;
+      margin-top: 80px;
+    }
+
+    :target.hobby-section {
+      display: block;
+    }
+
+    #reading:target ~ .default-message,
+    #gaming:target ~ .default-message,
+    #drawing:target ~ .default-message,
+    #chilling:target ~ .default-message {
+      display: none;
+    }
+
+/*Image style*/
+    .image-switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+
+  }
+
+  .image-switcher input {
+    display: none;
+  }
+
+  .image-switcher label img {
+    width: 400px;
+    height: 500px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    object-fit: cover;
+  }
+
+  .image-switcher label img:hover {
+    transform: scale(1.03);
+  }
+
+  /* Default: hide all */
+  .img1, .img2, .img3 {
+    display: none;
+ }
+
+#reading-img1:checked ~ .img1,
+#reading-img2:checked ~ .img2,
+#reading-img3:checked ~ .img3 {
+  display: block;
+}
+
+#gaming-img1:checked ~ .img1,
+#gaming-img2:checked ~ .img2,
+#gaming-img3:checked ~ .img3 {
+  display: block;
+}
+
+#drawing-img1:checked ~ .img1,
+#drawing-img2:checked ~ .img2,
+#drawing-img3:checked ~ .img3 {
+  display: block;
+}
+
+#chilling-img1:checked ~ .img1,
+#chilling-img2:checked ~ .img2,
+#chilling-img3:checked ~ .img3 {
+  display: block;
+}
+
+.hobby-section {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column; /* default for smaller screens */
+}
+
+.hobby-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-direction: row;
+  margin-top: 100px;
+  flex-wrap: nowrap;
+  padding-left: 80px;
+  padding-bottom: 80px;
+}
+:target ~ #default-message {
+  display: none;
+}
+
+/*Main image style*/
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  width: 700px;
+  
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 140px;
+    padding-top: 60px;
+  }
+
+  #menu-toggle:checked ~ .main-content {
+    margin-left: 140px;
+  }
+
+  .text-section {
+    padding-left: 20px;
+    padding-top: 20px;
+    max-width: 100%;
+  }
+
+  .hobby-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    margin-top: 40px;
+  }
+
+  .image-switcher {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-switcher label img,
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .main-content p {
+    font-size: 16px;
+  }
+
+  .main-content h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <ul id="navbar">
+    <li><a class="active" href="Homepage.html">Home</a></li>
+    <li><a href="Hobbies.html">Hobbies</a></li>
+    <li><a href="Interests.html">Interests</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+
+  <input type="checkbox" id="menu-toggle" />
+  <div class="sidebar">
+    
+    <a href="#reading">Reading</a>
+    <a href="#gaming">Gaming</a>
+    <a href="#drawing">Drawing</a>
+    <a href="#chilling">Chilling</a>
+  </div>
+  <label class="toggle-button" for="menu-toggle">☰ Hobbies</label>
+
+  <div class="main-content">
+    
+    <div id="reading" class="hobby-section">
+      <div class="hobby-wrapper">
+      <div class="image-switcher">
+        <input type="radio" name="reading" id="reading-img1" checked>
+        <input type="radio" name="reading" id="reading-img2">
+        <input type="radio" name="reading" id="reading-img3">
+
+        <label for="reading-img2" class="img1">
+          <img src="Hobbies pics\READING1.jpeg" alt="Reading Image 1">
+        </label>
+        <label for="reading-img3" class="img2">
+          <img src="Hobbies pics\READING2.jpeg" alt="Reading Image 2">
+        </label>
+        <label for="reading-img1" class="img3">
+          <img src="Hobbies pics\READING3.jpeg" alt="Reading Image 3">
+        </label>
+      </div>   
+      <div class="text-section" >
+        <h2>Reading</h2>
+        <br>
+       <p>
+        I love diving into books, even though I am picky when it comes to what I like to read and enjoy, but I enjoy classic literature, gothic stories, philosophy and fiction. Lately I've been trying to get into books that have been made into movies or TV shows, to see what the differences are or to see for myself which ones are better.
+        I especially appreciate books that explore human nature and the complexity of our inner world, stories and authors that aren't afraid to examine the dark or the uncomfortable.
+        I enjoy reading about the complexity of human thoughts, contradictions, emotions, etc., and I enjoy reading something that reflects that in a dark way but direct way.
+        Reading has been one of my favorite hobbies to engage into lately and some of my favorite books are: Crime and Punishment (Dostoevsky), The Idiot (Dostoevsky), Dracula (Bram Stoker), Salem's Lot (Stephen King), The Fall of the House of Usher (Edgar Allan Poe), The Metamorphosis (Kafka).
+      </p>
+    </div>
+  </div>
+</div>
+
+    <div id="gaming" class="hobby-section">
+      <div class="hobby-wrapper">
+
+      <div class="image-switcher">
+        <input type="radio" name="gaming" id="gaming-img1" checked>
+        <input type="radio" name="gaming" id="gaming-img2">
+        <input type="radio" name="gaming" id="gaming-img3">
+
+        <label for="gaming-img2" class="img1">
+          <img src="Hobbies pics\GAMES1.webp" alt="Game Image 1">
+        </label>
+        <label for="gaming-img3" class="img2">
+          <img src="Hobbies pics\GAMES2.jpg" alt="Game Image 2">
+        </label>
+        <label for="gaming-img1" class="img3">
+          <img src="Hobbies pics\GAMES3.jpg" alt="Game Image 3">
+        </label>
+      </div> 
+      <div class="text-section" > 
+        <h2>Gaming</h2>
+        <br>
+
+        <p>
+        I'm all about single player games, I love a good story and a good universe. I love games that give us an immersive world, where everything adds something meaningful.
+        Games with distinctive art styles, memorable characters and naratives, these games make me come back to them. For me, there is something special about being able to explore a 
+        world at your own pace, making decisions, finding out more about the lore, connecting with the characters and overall the journey.
+        I generally gravitate towards single-player because of the stories than i do over online multiplayer. I've had more hours than I should've had in multiplayer games, and they were fun, 
+        but they are not my cup of tea. Some of my favorite games have to be: Mass Effect (i've replayed the games too many times), Borderlands (hands down one of the best interactive universe and the coolest graphics), Bioshock (Rapture is the best city in gaming universe), Assassins Creed, Skyrim, Dead Space, too many.
+      </p>
+      </div>
+    </div>
+  </div>
+    <div id="drawing" class="hobby-section">
+      <div class="hobby-wrapper">
+
+      <div class="image-switcher">
+        <input type="radio" name="drawing" id="drawing-img1" checked>
+        <input type="radio" name="drawing" id="drawing-img2">
+        <input type="radio" name="drawing" id="drawing-img3">
+
+        <label for="drawing-img2" class="img1">
+          <img src="Hobbies pics\DRAWING1.jpeg" alt="Drawing Image 1">
+        </label>
+        <label for="drawing-img3" class="img2">
+          <img src="Hobbies pics\DRAWING2.jpeg" alt="Drawing Image 2">
+        </label>
+        <label for="drawing-img1" class="img3">
+          <img src="Hobbies pics\DRAWING3.jpeg" alt="Drawing Image 3">
+        </label>
+      </div>  
+      <div class="text-section" >   
+        <h2>Drawing</h2>
+        <br>
+
+       <p>
+        Drawing is something more personal to me, I dont do it as much as I would want to, I used to do it a lot many years ago, but I have grown apart from it, but not entirely as I still draw, but 
+        it's usually things that matter to me, sketches (I draw my own tattoos), sometimes if I really like a game or something that I vibe with I will draw a thing for it and keep it in my 
+        notebook where I keep most of them. There is no actual limit to what I draw, I have tons of things that I just felt like drawing at that moment, so I did.
+        To some extent I can say my notebook is closer to being a journal than a sketchbook and I like that a lot. I'm not a pro, but it doesn't matter to me, quality doesn't mean much when it comes to sketches and small drawings.
+        I've drawn a bunch of Adventure Time stuff, I used to have a ton of anime characters on paper as a kid everywhere in my desk, but now I've resumed to ideas rathen than cartoon characters.
+       </p>
+    </div>
+</div>
+</div>
+    <div id="chilling" class="hobby-section">
+      <div class="hobby-wrapper">
+
+      <div class="image-switcher">
+        <input type="radio" name="chilling" id="chilling-img1" checked>
+        <input type="radio" name="chilling" id="chilling-img2">
+        <input type="radio" name="chilling" id="chilling-img3">
+
+        <label for="chilling-img2" class="img1">
+          <img src="Hobbies pics\CHILLIN1.png" alt="Chilling Image 1">
+        </label>
+        <label for="chilling-img3" class="img2">
+          <img src="Hobbies pics\CHILLIN2.webp" alt="Chilling Image 2">
+        </label>
+        <label for="chilling-img1" class="img3">
+          <img src="Hobbies pics\CHILLIN3.webp" alt="Chilling Image 3">
+        </label>
+      </div>
+      <div class="text-section" >
+        <h2>Chilling</h2>
+        <br>
+
+      <p>
+        I enjoy quiet time in silence, just chilling and enjoying time by myself listening to music, reading whatever and watching movies/tv shows. Music is something that is playing at all times in my room and when it comes to what kind of music I listen to, I like to
+         tell people I listen to anyhing, but I am a huge metal fan and I am an even bigger fan of Bring Me The Horizon. I've been a fan of theirs for more than a decade now.
+        When it comes to movies/tv shows, I have to say that I hate superhero stuff, the most useless genre of entertainment, I love science-fiction,  stories that blend with futuritic settings, crime, mystery, horror.
+        Some of my favorite movies are the Alien movies, the Resident Evil movies, Star Wars, Lord of the Rings, when it comes to TV shows i really like American Horror Story, Doctor Who, Alice in Borderland, The Walking Dead.
+        I am a big fan of Hannibal, movies, books, tv shows.
+      </p>
+      </div>
+    </div>
+  </div>
+  <div id="default-message" class="default-message">
+      
+    <p style="font-size: 30px; text-align: center;  color: #bdbdbd;">Please select a hobby from the sidebar to see more!</p>
+    <img src="Hobbies pics\MAIN2.png" alt="Default pic">
+    <p style="font-size: 30px; text-align: center;  color: #bdbdbd;">Click the pictures!</p>
+
+  </div>
+</div>
+
+
+
+  
+
+
+  <!-- Footer -->
+  <footer style="position: sticky; z-index: 0;">
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" ></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+        <div class="footerNav">
+          <ul>
+            <li><a class="active" href="Homepage.html">Home</a></li>
+            <li><a href="Hobbies.html">Hobbies</a></li>
+            <li><a href="Interests.html">Interests</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+    </div>
+  </footer>
+</body>
+</html>

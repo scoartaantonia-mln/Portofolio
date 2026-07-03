@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Reset default margin and padding */
+    body, html {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* NAVBAR */
+    #navbar {
+      position: sticky;
+      top: 0;
+      background-color: #1f1f1f;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+    }
+
+    #navbar li {
+      list-style: none;
+    }
+
+    #navbar li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10.5px 20px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border-radius: 30px;
+    }
+
+    #navbar li a:hover {
+      background-color: #ffffff;
+      color: #1a1a2e;
+      transform: scale(1.05);
+    }
+
+    /* Footer css*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 20px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 25px;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #888888;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 10px;
+  max-width: 600px; /* Limit the width */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Optional soft shadow */
+
+}
+/* Map Styles */
+.contact-map-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    
+  }
+
+  .contact-form {
+    background-color: #f2f2f2;
+    padding: 30px;
+    max-width: 600px;
+    flex: 1 1 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+
+  .map-container {
+    flex: 1 1 400px;
+    max-width: 600px;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  @media (max-width: 800px) {
+    .contact-map-wrapper {
+      flex-direction: column;
+      padding: 20px;
+    }
+  }
+
+
+</style>
+</head>
+<body>
+    <!-- Navbar -->
+  <ul id="navbar">
+    <li><a class="active" href="Homepage.html">Home</a></li>
+    <li><a href="Hobbies.html">Hobbies</a></li>
+    <li><a href="Interests.html">Interests</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+<br><br>
+
+
+<div class="contact-map-wrapper">
+  <div class="contact-form">
+    <form action="action_page.php" method="POST">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        <option value="romania">Romania</option>
+        <option value="spain">Spain</option>
+        <option value="china">China</option>
+      </select>
+
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.8742609709174!2d25.589306276565597!3d45.65518097108151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35c1b1f1b1b1b%3A0x3aaf8e823d5bd3!2sFacultatea%20de%20Sociologie%20%C8%99i%20Comunicare%2C%20Universitatea%20Transilvania%20din%20Bra%C8%99ov!5e0!3m2!1sen!2sro!4v1714825823450!5m2!1sen!2sro"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+   <!-- Footer -->
+   <footer style="position: sticky; z-index: 0;">
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" ></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+            <li><a class="active" href="Homepage.html">Home</a></li>
+            <li><a href="Hobbies.html">Hobbies</a></li>
+            <li><a href="Interests.html">Interests</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+    </div>
+  </footer>
+</body>
+</html>
+</body>

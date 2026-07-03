@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .gallery {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery input {
+      display: none;
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      z-index: 0;
+    }
+
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    #img1:checked ~ .images .img1,
+    #img2:checked ~ .images .img2,
+    #img3:checked ~ .images .img3,
+    #img4:checked ~ .images .img4,
+    #img5:checked ~ .images .img5 {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .arrows {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .arrows label {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      pointer-events: auto;
+      user-select: none;
+    }
+
+    /* Show/hide specific arrows depending on current image */
+    #img1:checked ~ .arrows .prev1,
+    #img1:checked ~ .arrows .next1,
+    #img2:checked ~ .arrows .prev2,
+    #img2:checked ~ .arrows .next2,
+    #img3:checked ~ .arrows .prev3,
+    #img3:checked ~ .arrows .next3,
+    #img4:checked ~ .arrows .prev4,
+    #img4:checked ~ .arrows .next4,
+    #img5:checked ~ .arrows .prev5,
+    #img5:checked ~ .arrows .next5 {
+      display: block;
+    }
+
+    .arrows label {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gallery">
+  <!-- Radio buttons -->
+  <input type="radio" name="slider" id="img1" checked>
+  <input type="radio" name="slider" id="img2">
+  <input type="radio" name="slider" id="img3">
+  <input type="radio" name="slider" id="img4">
+  <input type="radio" name="slider" id="img5">
+
+  <!-- Images -->
+  <div class="images">
+    <div class="image img1"><img src="https://via.placeholder.com/300x400/007BFF/ffffff?text=1" alt="1"></div>
+    <div class="image img2"><img src="https://via.placeholder.com/300x400/6f42c1/ffffff?text=2" alt="2"></div>
+    <div class="image img3"><img src="https://via.placeholder.com/300x400/20c997/ffffff?text=3" alt="3"></div>
+    <div class="image img4"><img src="https://via.placeholder.com/300x400/ffc107/000000?text=4" alt="4"></div>
+    <div class="image img5"><img src="https://via.placeholder.com/300x400/dc3545/ffffff?text=5" alt="5"></div>
+  </div>
+
+  <!-- Arrows -->
+  <div class="arrows">
+    <!-- For image 1 -->
+    <label class="prev1" for="img5">&#10094;</label>
+    <label class="next1" for="img2">&#10095;</label>
+
+    <!-- For image 2 -->
+    <label class="prev2" for="img1">&#10094;</label>
+    <label class="next2" for="img3">&#10095;</label>
+
+    <!-- For image 3 -->
+    <label class="prev3" for="img2">&#10094;</label>
+    <label class="next3" for="img4">&#10095;</label>
+
+    <!-- For image 4 -->
+    <label class="prev4" for="img3">&#10094;</label>
+    <label class="next4" for="img5">&#10095;</label>
+
+    <!-- For image 5 -->
+    <label class="prev5" for="img4">&#10094;</label>
+    <label class="next5" for="img1">&#10095;</label>
+  </div>
+</div>
+
+</body>
+</html>

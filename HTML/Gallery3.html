@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery3</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Reset default margin and padding */
+    body, html {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background-color: #fff;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* NAVBAR */
+    #navbar {
+      position: sticky;
+      top: 0;
+      background-color: #1f1f1f;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+    }
+
+    #navbar li {
+      list-style: none;
+    }
+
+    #navbar li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10.5px 20px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border-radius: 30px;
+    }
+
+    #navbar li a:hover {
+      background-color: #ffffff;
+      color: #1a1a2e;
+      transform: scale(1.05);
+    }
+
+    /* Footer css*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 20px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 25px;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+/* portofolio pictures*/
+.portfolio-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.portfolio-header {
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 2px solid #333;
+}
+
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-image {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  margin-bottom: 30px;
+}
+.portofolio-gallery{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+  gap: 20px;
+  margin: 10px;
+}
+
+</style>
+</head>
+<body>
+ <!-- Navbar Section -->
+ <ul id="navbar">
+    <li><a class="active" href="Homepage.html">Home</a></li>
+    <li><a href="Hobbies.html">Hobbies</a></li>
+    <li><a href="Interests.html">Interests</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+
+  <div class="portfolio-container">
+    <div class="portfolio-header">
+      <a href="Interests.html" class="back-link">Back to Interests</a>
+    </div>
+<div class="portofolio-gallery">
+    <div class="portfolio-content">
+      <img src="Gallery3 pics\a.jpg" alt="Blair Witch Project" class="portfolio-image">
+    </div>
+    <div class="portfolio-content">
+        <img src="Gallery3 pics\b.jpg" alt="Lord of the Rings" class="portfolio-image">
+    </div>
+    <div class="portfolio-content">
+        <img src="Gallery3 pics\c.jpg" alt="Sinister" class="portfolio-image">
+    </div>
+    <div class="portfolio-content">
+        <img src="Gallery3 pics\d.jpg" alt="Star Wars" class="portfolio-image">
+    </div>
+    <div class="portfolio-content">
+        <img src="Gallery3 pics\e.jpg" alt="Tetsuo Iron Man" class="portfolio-image">
+    </div>
+    <div class="portfolio-content">
+        <img src="Gallery3 pics\f.jpg" alt="Texas Chainsaw Massacre" class="portfolio-image">
+    </div>
+    <div class="portfolio-content">
+        <img src="Gallery3 pics\g.jpeg" alt="Alien" class="portfolio-image">
+    </div>
+    <div class="portfolio-content">
+        <img src="Gallery3 pics\h.jpg" alt="Chungking Express" class="portfolio-image">
+    </div>
+    <div class="portfolio-content">
+        <img src="Gallery3 pics\i.jpg" alt="Bram Stoker's Dracula" class="portfolio-image">
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" ></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a class="active" href="Homepage.html">Home</a></li>
+                <li><a href="Hobbies.html">Hobbies</a></li>
+                <li><a href="Interests.html">Interests</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+              </ul>
+        </div>
+        
+    </div>
+  </footer>
+</body>
+</html>

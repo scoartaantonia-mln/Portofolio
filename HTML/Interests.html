@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interests</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Reset default margin and padding */
+    body, html {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: 'Roboto', sans-serif;
+
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* NAVBAR */
+    #navbar {
+      position: sticky;
+      top: 0;
+      background-color: #1f1f1f;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+    }
+
+    #navbar li {
+      list-style: none;
+    }
+
+    #navbar li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10.5px 20px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border-radius: 30px;
+    }
+
+    #navbar li a:hover {
+      background-color: #ffffff;
+      color: #1a1a2e;
+      transform: scale(1.05);
+    }
+
+    /* Footer css*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 20px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 25px;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+
+/* Content style*/
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 100%;
+  display: inline-block;
+
+}
+
+.image {
+  opacity: 0.6;
+  display: block;
+  width: 100%;
+  height: 350px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  object-fit: cover;
+
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 1;
+}
+
+.container:hover .middle {
+  opacity: 0;
+}
+
+.text {
+  color: rgb(0, 0, 0);
+  font-size: 28px;
+  padding: 16px 32px;
+  font-weight: bold;
+
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 40px;
+  justify-items: center;
+  width: 100%;
+  margin: 50px auto;
+  padding: 0 20px;
+
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* 1 column for smaller screens */
+  }
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+  <ul id="navbar">
+    <li><a class="active" href="Homepage.html">Home</a></li>
+    <li><a href="Hobbies.html">Hobbies</a></li>
+    <li><a href="Interests.html">Interests</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+
+  <div class="gallery">
+    <div class="container">
+      <a href="gallery1.html">
+        <img src="Interests pics\MAINPICG1.jpg" alt="Retro Anime" class="image">
+        <div class="middle">
+          <div class="text">RETRO ANIME</div>
+        </div>
+      </a>
+    </div>
+  
+    <div class="container">
+      <a href="gallery2.html">
+        <img src="Interests pics\MAINPICG2.jpg" alt="Japanese Culture" class="image">
+        <div class="middle">
+          <div class="text">JAPANESE CULTURE</div>
+        </div>
+      </a>
+    </div>
+  
+    <div class="container">
+      <a href="gallery3.html">
+        <img src="Interests pics\MAINPICG3.jpg" alt="Movies" class="image">
+        <div class="middle">
+          <div class="text">MOVIES</div>
+        </div>
+      </a>
+    </div>
+  
+    <div class="container">
+      <a href="gallery4.html">
+        <img src="Interests pics\MAINPICG4.webp" alt="Music" class="image">
+        <div class="middle">
+          <div class="text">MUSIC</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="position: sticky; z-index: 0;">
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" ></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+            <li><a class="active" href="Homepage.html">Home</a></li>
+            <li><a href="Hobbies.html">Hobbies</a></li>
+            <li><a href="Interests.html">Interests</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+    </div>
+  </footer>
+</body>
+</html>
+</body>

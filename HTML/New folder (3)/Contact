@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width,
+      initial-scale=1.0">
+    <title>Contact</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="Home Page.html">Home Page</a></li>
+        <li><a href="Contact">Contact</a></li>
+        
+      </ul>
+    <h2>You can contact me as follows: </h2>
+    <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <br>  <br>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <br>  <br>
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+            <option value="Romania">Romania</option>
+            <option value="Pangea">Pangea</option>
+          </select>
+      <br>  <br>
+          <label for="subject">Subject of contact</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+      <br>  <br>
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+    <p><a href="Home Page.html"> Go to Home Page</a></p>
+    <footer>
+      <p> <a href="mailto:antonia.scoarta@student.unitbv.ro" You can also contact me at antonia.scoarta@student.unitbv.ro </a></p>
+    </footer>
+</body>
+
+</html>

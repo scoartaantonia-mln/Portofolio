@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Reset default margin and padding */
+    body, html {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navbar Styles */
+    #navbar {
+      position: sticky;
+      top: 0;
+      background-color: #a39247;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+    }
+
+    #navbar li {
+      list-style: none;
+    }
+
+    #navbar li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border-radius: 30px;
+    }
+
+    #navbar li a:hover {
+      background-color: #ffffff;
+      color: #1a1a2e;
+      transform: scale(1.05);
+    }
+
+    /* Parallax Styles */
+    .parallax {
+      background-image: url("img_parallax.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .second-parallax {
+      background-image: url('https://your-second-image-url.jpg');
+      min-height: 100vh;
+    }
+
+    /* Container Styles */
+    .container {
+      color: rgb(0, 0, 0);
+      margin: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url(https://i.pinimg.com/1200x/d3/91/d4/d391d4d24fd62469e1aaaf08a0a2e7e0.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding-top: 15vh;
+      text-align: center;
+    }
+
+    /* Heading Styles */
+    .first-h1 {
+      font-size: 25px;
+      font-weight: 800;
+      padding: 5px 35px;
+      background-color: white;
+      border-radius: 24px;
+      color: #202124;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width: 90%;
+      letter-spacing: 5px;
+    }
+
+    .first-h6 {
+      margin: 10px;
+      padding: 4px 20px;
+      background-color: #f8f9fa;
+      border-radius: 20px;
+      color: #5f6368;
+      font-weight: 700;
+      font-size: 10px;
+    }
+
+    /* List Styles */
+    .list {
+      background-color: #e9e509;
+      padding: 20px;
+      list-style-type: circle;
+      list-style-position: inside;
+      border-radius: 10px;
+      font-size: 13px;
+    }
+
+    .list li {
+      margin-bottom: 5px;
+    }
+
+    /* Background Section Styles */
+    .bg-2 {
+      background-image: url('https://www.oceanclock.com/img/modules/oh_news/news/56_picture.jpg');
+      min-height: 100vh;
+    }
+
+    .bg-3 {
+      background-image: url('https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=');
+      min-height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Content Section Styles */
+    .content-section {
+      background-color: #b8bdcc;
+      padding: 80px 40px;
+      font-size: 18px;
+      line-height: 1.6;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* Text Box Styles for each box */
+    .content-box {
+      background-color: #fff;
+      padding: 20px;
+      width: 30%;
+      border-radius: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content-box img {
+      max-width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .content-box h3 {
+      text-align: center;
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* Myself Section Styles */
+    .myself {
+      background-color: rgb(255, 255, 255);
+      font-size: 10px;
+      padding: 15px 55px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+      width: 100%;
+    }
+
+    .img1 {
+      width: 40%;
+      max-width: 200px;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+    }
+
+    .myself h1 {
+      font-size: 15px;
+      color: #202124;
+      margin-bottom: 10px;
+      margin-top: 50px;
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 14px;
+      box-shadow: 0 10px 10px rgba(124, 4, 4, 0.1);
+      background-color: #ffffff;
+      max-width: fit-content;
+      text-align: left;
+    }
+
+    .myself h3 {
+      color: #202124;
+      margin-bottom: 20px;
+      display: inline-block;
+      padding: 5px 20px;
+      border-radius: 14px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .myself .img1 {
+      width: 70%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-top: 10px;
+      display: block;
+      order: 2;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .myself-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .myself-content h3 {
+      flex: 1 1 300px;
+      font-weight: normal;
+      color: #333;
+      line-height: 1.6;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Text Box Styles */
+    .text-box {
+      flex: 1 1 300px;
+      text-align: left;
+      padding: 30px 40px;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .text-box h3 {
+      font-weight: normal;
+      color: #000000;
+      line-height: 1.6;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Container holding the three boxes */
+    .content-section {
+  background-color: #f7f7f7;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Individual box style */
+.content-box {
+  background-color: #fff;
+  padding: 10px;
+  width: 30%;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-box:hover {
+  transform: translateY(-10px);
+}
+
+/* Image inside the boxes */
+.content-box img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+/* Title inside the box */
+.content-box h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Paragraph inside the box */
+.content-box p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.content-box.top:hover {
+  transform: translateY(-10px); /* Moves the top box upwards */
+}
+
+.content-box.bottom:hover {
+  transform: translateY(-10px); /* Moves the bottom box upwards */
+}
+
+/* Hover Effect for the Middle Box */
+.content-box.middle:hover {
+  transform: translateY(10px); /* Moves the middle box downwards */
+}
+
+/* Responsive: Stack the boxes on smaller screens */
+@media (max-width: 768px) {
+  .content-box {
+  transition: transform 0.3s ease;
+}
+}
+
+
+.three-boxes {
+  font-size: 18px;
+      color: #202124;
+      margin-bottom: 10px;
+      margin-top: 50px;
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 5px;
+      box-shadow: 0 10px 10px rgba(124, 4, 4, 0.1);
+      background: linear-gradient(to bottom, #999966 0%, #cc9900 33%);
+      max-width: fit-content;
+      text-align: left;
+    
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar Section -->
+  <ul id="navbar">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#hobbies">Hobbies</a></li>
+    <li><a href="#interests">Interests</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <!-- Parallax Section -->
+  <div class="parallax"></div>
+
+  <!-- Welcome Section -->
+  <div class="container" id="about">
+    <h1 class="first-h1">Welcome to my project</h1>
+    <h6 class="first-h6">A bit about myself</h6>
+  </div>
+
+  <!-- About Me Section -->
+  <div class="myself">
+    <h1>Something about myself</h1>
+    <div class="myself-content">
+      <div class="text-box">
+        <h3>
+          My name is Antonia, I am 23 years old, I am a student at the University of Transilvanya, Faculty of Sociology and Communication, specializing in Digital Media. 
+          I previously studied at the Faculty of Electrical Engineering and Computer Science, but my interests did not align with that field, so I decided to pursue something more modern 
+          and relevant and agreed on Sociology due to the increasing effects and usage of Social Media and the influence it has on society as well as the connection between people
+           and how it's going to affect us and our future.
+        </h3>
+        <h3>
+          My name is Antonia, I am 23 years old, I am a student at the University of Transilvanya, Faculty of Sociology and Communication, specializing in Digital Media. 
+          I previously studied at the Faculty of Electrical Engineering and Computer Science, but my interests did not align with that field, so I decided to pursue something more modern 
+          and relevant and agreed on Sociology due to the increasing effects and usage of Social Media and the influence it has on society as well as the connection between people
+           and how it's going to affect us and our future.
+        </h3>
+      </div>
+      <img src="https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=" class="img1">
+    </div>
+  </div>
+
+  <!-- Parallax Section -->
+  <div class="parallax bg-2"></div>
+
+  <!-- Interests Section -->
+  <div class="content-section">
+    <p class="three-boxes">Studying something else before this actually gave me a bunch of useful skills I still use today. It also opened the door to some interests I didn’t expect, like:</p>
+  
+    <div class="content-box top">
+      <img src="https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=" alt="Math and Physics">
+      <h3>A fondness for math and physics</h3>
+      <p>Math has always been my thing, but over time, I’ve come to appreciate it even more. It’s not just about solving problems—it’s about understanding patterns and logic. Physics, on the other hand, 
+        felt overwhelming at first. The concepts were tough to grasp, but as I kept at it, I started finding it more interesting than I expected. The way everything in the universe connects through physics really caught my attention.</p>
+    </div>
+
+    <div class="content-box middle">
+      <img src="https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=" alt="Technology">
+      <h3>A bigger interest in technology</h3>
+      <p>It’s not just something I use anymore—it’s something that really sparks my curiosity. The more I learn about technology, the more I realize how much there is to explore. There’s always something new happening, whether it’s a
+         groundbreaking innovation or a cool new app, and I find it exciting to stay updated. It’s amazing to see how fast everything evolves, and I love diving into the changes and seeing how they shape the world around us.</p>
+    </div>
+
+    <div class="content-box bottom">
+      <img src="https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=" alt="Sustainability">
+      <h3>Interest in sustainability</h3>
+      <p>After learning about sustainability and the importance of choosing electronic devices that contribute to less CO2 emissions, I’ve really started to pay more attention to the environmental impact of my choices. It’s not just
+         about picking the most energy-efficient products, but about making more mindful decisions in general. From opting for devices with longer lifespans to choosing brands with stronger sustainability commitments, I try to incorporate these principles into my daily life. It's been an eye-opener, and I feel like I'm doing my part in minimizing my carbon footprint.</p>
+    </div>
+  </div>
+
+  <!-- Parallax Section -->
+  <div class="parallax bg-3"></div>
+
+  <!-- Future Plans Section -->
+  <div class="content-section">
+    <h2>Some Title Here</h2>
+    <p>This is where I talk about something else, like future plans, goals, passions, etc.</p>
+  </div>
+
+</body>
+
+</html>

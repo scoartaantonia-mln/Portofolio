@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width,
+      initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="Home Page">Home Page</a></li>
+        <li><a href="Contact">Contact</a></li>
+        
+      </ul>
+    <h1 style="color: green;">
+        Hello, my name is Scoarta Antonia, I am from Buzau, i am 23 years old, i enjoy reading, watching movies and going on walks..</h1>
+    <h2>I am a student at the Faculty of Sociology and Communication, Digital Media 2nd year, however in the past i was a student for Electrical Engineering and Computer Science.</h2>
+    <h3>I'd say i have skills in different areas, i manage to work with different apps and i take an interest in a lot of different topics, so i am able to develop skills in whatever i decide to do, but i am in no means an expert.</h3>
+    <h3>I have done html before and i have, to some extent, experience in it. I've enjoyed it then and im glad i am able to do it again and get better at it, especially on the design part of it, hopefully. </h3>
+    <p><a href="Contact"> Go to Contact</a></p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Basic_human_drawing.png" >
+</body>
+
+</html>
